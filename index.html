@@ -64,17 +64,19 @@
     </main>
 
     <!-- ===== New Condact Add Section ===== -->
+
     <section class="wrapper" id="addContact">
         <a href="#home"><span class="material-symbols-outlined goBack">
             arrow_back_ios_new
-            </span></a>
-        <form action="">
+            </span>
+        </a>
+        <form action="" id="contactForm">
             <div id="uploadImgDiv">
-                <label for="file-upload" class="custom-file-upload"><img src="imgs/addImage.png" alt=""></label>
+                <label for="file-upload" class="custom-file-upload" id="contactImg"><img src="imgs/addImage.png" alt=""></label>
                 <input type="file" id="file-upload" name="file-upload" accept="image/*" style="display: none;">                            
             </div>
             <div class="inputBox">
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" id="contactName">
                 <div class="errBox">
                     <span id="nmErr"></span>
                     <span class="material-symbols-outlined">
@@ -84,15 +86,15 @@
             </div>
             
             <div class="inputBox">
-                <input type="text" placeholder="Phone">
+                <input type="text" placeholder="Phone" id="contactPhNo">
                 <div class="errBox">
-                    <span id="nmErr"></span>
+                    <span id="phErr"></span>
                     <span class="material-symbols-outlined">
                         error
                     </span>
                 </div>
             </div>
-            <input type="submit" value="Add Contact">
+            <input type="submit" value="submit">
         </form>        
     </section>
 
