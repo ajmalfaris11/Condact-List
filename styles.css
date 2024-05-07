@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7351DE;
+    list-style: none;
+}
+
+body{
+    background-color: #7351DE;
+}
+
+.wrapper{
+    padding-inline: 10%;
+}
+
+/* ===== Header section ===== Header section ===== */
+
+header section{
+    padding: 10px;
+    padding-top: 30px;
+}
+header h1{
+    font-size:32px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header div{
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+header span{
+    color: white;
+    text-align: end;
+    align-items: end;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    transition: 0.5s ease-in-out;
+}
+header span:hover{
+    color: #7351DE;
+    background-color: white;
+}
+
+/* ====== Main section Style ====== Main section Style ====== */
+
+
+main{
+    height: 100vh;
+    overflow-y: scroll;
+}
+main ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 20px;
+}
+
+main ul li{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    transition:0.5s ease-in-out;
+}
+
+li:hover{
+    transform: scale(1.1);
+}
+
+main ul li div.contact{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.contact img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  top: 0;
+}
+
+div.contact h2{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+div.contact p{
+    font-size: smaller;
+}
+
+#addContact{
+    height: 100vh;
+}
+
+/* ====== Form Style ====== Form Style ====== */
+.custom-file-upload{
+    background-color: white;
+    width: 70px;
+    height:70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.custom-file-upload img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.inputBox{
+    display: flex;
+    padding: 10px;
+    border-radius:6px;
+    background-color: white;
+    width: 100%;
+}
+
+.inputBox span{
+    font-size:small;
+    color: red;
+}
+
+input::placeholder{
+    color: #7351DE;
+}
+
+/*------------  error box -------- */
+
+.errBox{
+    display: flex;
+    justify-content: end;
+    width: 170px;
+    display: none;
+}
+#nmErr, #phErr{
+    background-color: white;
+    width:100%;
+    text-align: start;
+    font-size: xx-small;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form input{
+    outline: none;
+    border: none;
+    width: 100%;
+
+}
+
+
+input[type='submit']{
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: white;
+}

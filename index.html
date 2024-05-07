@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact List</title>
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,42 +13,83 @@
     <header>
         <section class="wrapper">
             <h1>Contacts</h1>
+            <div>
+                <a href="#addContact">
+                    <span class="material-symbols-outlined">add</span>
+                </a>
+                
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+
+                <span class="material-symbols-outlined">
+                    more_vert
+                </span>
+            </div>
         </section>
     </header>
     <!-- ===== Maini Part ===== -->
     <main>
-        <ul id="contactsList">
-            <li>
-                <div class="contact">
-                    <img src="imgs/profile1.png" alt="Profile">
-                    <h2>Ajmal</h2>
-                    <p>7558969093</p>
-                </div>
-            </li>
-            <li>
-                <div class="contact">
-                    <img src="imgs/profile2.png" alt="Profile">
-                    <h2>Ajk</h2>
-                    <p>7558969093</p>
-                </div>
-            </li>
-            <li>
-                <div class="contact">
-                    <img src="imgs/profile3.jpg" alt="Profile">
-                    <h2>CAJ</h2>
-                    <p>7558969093</p>
-                </div>
-            </li>
-        </ul>
+        <section class="wrapper">
+            <ul id="contactsList">
+                <li>
+                    <div class="contact">
+                        <img src="imgs/profile1.png" alt="Profile">
+                        <div>
+                            <h2>Ajmal</h2>
+                            <p>7558969093</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contact">
+                        <img src="imgs/profile2.png" alt="Profile">
+                        <div>
+                            <h2>Ajk</h2>
+                            <p>7558969093</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contact">
+                        <img src="imgs/profile3.jpg" alt="Profile">
+                        <div>
+                            <h2>CAJ</h2>
+                            <p>7558969093</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <!-- ===== New Condact Add Section ===== -->
-    <section class="wrapper">
+    <section class="wrapper" id="addContact">
         <form action="">
-            <input type="image">
-            <input type="text">
-            <input type="number">
-        </form>
+            <label for="file-upload" class="custom-file-upload"><img src="imgs/addImage.png" alt=""></label>
+            <input type="file" id="file-upload" name="file-upload" accept="image/*" style="display: none;">                        
+            
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+                <div class="errBox">
+                    <span id="nmErr"></span>
+                    <span class="material-symbols-outlined">
+                        error
+                    </span>
+                </div>
+            </div>
+            
+            <div class="inputBox">
+                <input type="text" placeholder="Phone">
+                <div class="errBox">
+                    <span id="nmErr"></span>
+                    <span class="material-symbols-outlined">
+                        error
+                    </span>
+                </div>
+            </div>
+            <input type="submit" value="Add Contact">
+        </form>        
     </section>
 
     <script src="script.js"></script>
