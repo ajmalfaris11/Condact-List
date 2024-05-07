@@ -98,14 +98,16 @@ div.contact p{
     font-size: smaller;
 }
 
+/* ====== Form Style ====== Form Style ====== */
+
+
 #addContact{
     height: 100vh;
 }
 
-/* ====== Form Style ====== Form Style ====== */
-
 .goBack{
     color: white;
+    margin-top: 30px;
 }
 .custom-file-upload{
     background-color: white;
@@ -123,11 +125,13 @@ div.contact p{
     height: 50px;
 }
 
-
+#uploadImgDiv{
+    margin-bottom: 30px;
+}
 .inputBox{
     display: flex;
-    padding: 10px;
-    border-radius:6px;
+    padding: 16px;
+    border-radius:8px;
     background-color: white;
     width: 100%;
 }
