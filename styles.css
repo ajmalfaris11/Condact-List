@@ -102,7 +102,7 @@ div.contact p{
 
 
 #addContact{
-    height: 100vh;
+    height: 80vh;
 }
 
 .goBack{
@@ -184,4 +184,27 @@ input[type='submit']{
     border-radius: 8px;
     margin-top: 10px;
     background-color: white;
+}
+
+
+/* ===== Footer ====== Footer ====== Footer ====== */
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+footer section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 30px;
+
+}
+
+footer section i{
+    color: white;
 }
