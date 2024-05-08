@@ -46,6 +46,12 @@ function handleSubmission(event) {
     formImg.src ="imgs/addImage.png"
     // Finally ermove the given value will be cleared
     contactForm.reset();
+
+    home.style.display = 'block';
+    main.style.display = 'block';
+    addContactSection.style.display = 'none'
+    footer.style.display = 'none';
+
 }
 
 const home = document.getElementById('home');
