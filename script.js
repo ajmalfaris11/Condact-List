@@ -1,3 +1,12 @@
+// ====== Form Validation ======
+
+
+
+
+
+
+
+
 // Form Submission
 const fileUploadInput = document.getElementById('file-upload');
 
@@ -62,6 +71,9 @@ const backBtn = document.getElementById('backBtn');
 
 const addContactSection = document.getElementById('addContact')
 const footer = document.getElementById('footer');
+
+const CancelBtn = document.getElementById('CancelBtn');
+
 addBtn.addEventListener('click', function(){
    
     home.style.display = 'none';
@@ -79,3 +91,13 @@ backBtn.addEventListener('click', function(){
     footer.style.display = 'none';
 
 });
+
+CancelBtn.addEventListener('click', function(){
+    home.style.display = 'block';
+    main.style.display = 'block';
+    addContactSection.style.display = 'none';
+    footer.style.display = 'none';
+    formImg.src ="imgs/addImage.png"
+    contactForm.reset();
+
+})

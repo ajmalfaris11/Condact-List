@@ -82,11 +82,11 @@ main ul li{
     background-color: #fff;
     padding: 10px;
     border-radius: 12px;
-    transition:0.5s ease-in-out;
+    transition:1s ease-in-out;
 }
 
 li:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 main ul li div.contact{
@@ -161,6 +161,7 @@ input::placeholder{
     color: #7351DE;
 }
 
+
 /*------------  error box -------- */
 
 .errBox{
@@ -194,12 +195,28 @@ form input{
 
 }
 
+#buttons{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#CancelBtn{
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+
+}
 
 input[type='submit']{
-    padding: 10px;
     border-radius: 8px;
-    margin-top: 10px;
     background-color: white;
+    width: 100%;
+    padding: 10px;
 }
 
 
