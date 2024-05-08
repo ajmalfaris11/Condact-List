@@ -42,9 +42,10 @@ function handleSubmission(event) {
     const contactsList = document.getElementById('contactsList');
     contactsList.appendChild(li);
 
-    contactForm['contactName'].value = "";
-    contactForm['contactPhNo'].value = "";
-
+    // Remove the image from the form page and set the default image 
+    formImg.src ="imgs/addImage.png"
+    // Finally ermove the given value will be cleared
+    contactForm.reset();
 }
 
 const home = document.getElementById('home');
