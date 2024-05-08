@@ -3,10 +3,6 @@
 
 
 
-
-
-
-
 // Form Submission
 const fileUploadInput = document.getElementById('file-upload');
 
