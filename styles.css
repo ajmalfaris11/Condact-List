@@ -9,6 +9,7 @@
 
 body{
     background-color: #7351DE;
+    scroll-behavior: smooth;
 }
 
 .wrapper{
@@ -18,8 +19,13 @@ body{
 /* ===== Header section ===== Header section ===== */
 
 header section{
-    padding: 10px;
-    padding-top: 30px;
+    margin-top: 30px;
+}
+#heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 header h1{
     font-size:32px;
@@ -27,8 +33,15 @@ header h1{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-header div{
+header .links{
+    display: flex;
+    gap: 10px;
+}
+#heading a i{
+    color: white;
+    font-size: xx-small;
+}
+header div.icon{
     margin-top: 30px;
     display: flex;
     justify-content: end;
@@ -54,8 +67,9 @@ header span:hover{
 
 
 main{
-    height: 100vh;
+    height: 80vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 main ul{
     display: flex;
@@ -207,4 +221,9 @@ footer section{
 
 footer section i{
     color: white;
+    transition: 0.5s ease-in-out;
+}
+
+footer section i:hover{
+    transform: scale(1.2);;
 }
