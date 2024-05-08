@@ -30,4 +30,28 @@ function handleSubmission(event) {
 
 }
 
+const home = document.getElementById('home');
+const main = document.getElementById('main');
 
+const addBtn = document.getElementById('addBtn');
+const backBtn = document.getElementById('backBtn');
+
+const addContactSection = document.getElementById('addContact')
+const footer = document.getElementById('footer');
+addBtn.addEventListener('click', function(){
+   
+    home.style.display = 'none';
+    main.style.display = 'none';
+    addContactSection.style.display = 'block'
+    footer.style.display = 'flex';
+    
+})
+
+backBtn.addEventListener('click', function(){
+    
+    home.style.display = 'block';
+    main.style.display = 'block';
+    addContactSection.style.display = 'none'
+    footer.style.display = 'none';
+
+});

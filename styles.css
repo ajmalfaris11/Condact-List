@@ -117,6 +117,7 @@ div.contact p{
 
 #addContact{
     height: 80vh;
+    display: none;
 }
 
 .goBack{
@@ -203,11 +204,11 @@ input[type='submit']{
 
 /* ===== Footer ====== Footer ====== Footer ====== */
 
-footer{
+#footer{
     position: relative;
-    display: flex;
     justify-content: center;
     height: 20vh;
+    display: none;
 }
 footer section{
     display: flex;
