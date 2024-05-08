@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #7351DE;
+    background:linear-gradient(to right, #845fff, #7047f7);
     scroll-behavior: smooth;
 }
 
