@@ -1,4 +1,21 @@
 // Form Submission
+const fileUploadInput = document.getElementById('file-upload');
+
+// Listen for the "change" event on the file input
+fileUploadInput.addEventListener('change', function(event) {
+    
+    // Get the selected file
+    const selectedImg = event.target.files[0];
+   
+    // Create a URL for the selected file and assign it to the image element
+    const formImg = document.getElementById('formImg');
+    if (formImg) {
+        formImg.src = URL.createObjectURL(selectedImg);
+    }
+});
+
+
+
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', handleSubmission);
 

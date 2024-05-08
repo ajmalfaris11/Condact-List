@@ -13,7 +13,7 @@ body{
 }
 
 .wrapper{
-    padding-inline: 10%;
+    padding-inline: 5%;
 }
 
 /* ===== Header section ===== Header section ===== */
@@ -125,19 +125,20 @@ div.contact p{
     margin-top: 30px;
 }
 .custom-file-upload{
-    background-color: white;
     width: 70px;
     height:70px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .custom-file-upload img{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+
 }
 
 #uploadImgDiv{
