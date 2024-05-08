@@ -219,6 +219,16 @@ input[type='submit']{
     padding: 10px;
 }
 
+#contactFormImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    margin-top:10px;
+}
+#contactFormImg img{
+    height: 100%;
+}
 
 /* ===== Footer ====== Footer ====== Footer ====== */
 
