@@ -72,7 +72,7 @@ header span:hover{
 
 
 main{
-    height: 80vh;
+    height: 70vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
@@ -173,7 +173,6 @@ input::placeholder{
     display: flex;
     justify-content: end;
     width: 170px;
-    display: none;
 }
 #nmErr, #phErr{
     background-color: white;

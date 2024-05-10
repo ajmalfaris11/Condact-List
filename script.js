@@ -1,5 +1,23 @@
 // ====== Form Validation ======
 
+const contactName = document.getElementById('contactName');
+const nmErr = document.getElementById('nmErr');
+
+contactName.addEventListener('input', function(){
+    const nmValue = contactName.value;
+
+    if (nmValue.length > 15) {
+        nmErr.innerHTML = 'No more than 15 characters';
+        contactName.value = nmValue.slice(0, 15); // Trim input to 15 characters
+    } else {
+        nmErr.innerHTML = ''; // Clear error message if input is valid
+    }
+
+    if (!/^[a-zA-Z]+$/.test(nmValue)){
+        nmErr.innerHTML = 'Letters Only Allowed';
+        contactName.value = contactName.value.slice(0, -1);
+    }
+});
 
 
 
