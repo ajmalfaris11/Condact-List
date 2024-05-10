@@ -1,22 +1,79 @@
-// ====== Form Validation ======
-
+// Get DOM elements
+const nmErrBox = document.getElementById('nmErrBox');
+const nmInfo = document.getElementById('nmInfo');
 const contactName = document.getElementById('contactName');
 const nmErr = document.getElementById('nmErr');
 
+// Event listener for input on the contactName field
 contactName.addEventListener('input', function(){
     const nmValue = contactName.value;
 
-    if (nmValue.length > 15) {
-        nmErr.innerHTML = 'No more than 15 characters';
-        contactName.value = nmValue.slice(0, 15); // Trim input to 15 characters
+    // Validation for length
+    if (nmValue.length > 15 && nmValue.length != 0 ) {
+        // Show error message when mouse is over nmInfo
+        nmInfo.addEventListener('mouseover', () => nmErr.innerHTML = 'No more than 15 characters');
+        // Clear error message when mouse leaves nmInfo
+        nmInfo.addEventListener('mouseout', () => nmErr.innerHTML = '');
+        nmErrBox.style.display = 'flex';
+        // Trim input to 15 characters
+        contactName.value = nmValue.slice(0, 15);
     } else {
+        nmErrBox.style.display = 'none';
         nmErr.innerHTML = ''; // Clear error message if input is valid
     }
 
-    if (!/^[a-zA-Z]+$/.test(nmValue)){
-        nmErr.innerHTML = 'Letters Only Allowed';
+    // Validation for letters only
+    if (!/^[a-zA-Z\s]+$/.test(nmValue) && nmValue.length != 0){
+        // Show error message when mouse is over nmInfo
+        nmInfo.addEventListener('mouseover', () => nmErr.innerHTML = 'Letters Only Allowed');
+        // Clear error message when mouse leaves nmInfo
+        nmInfo.addEventListener('mouseout', () => nmErr.innerHTML = '');
+
+        nmErrBox.style.display = 'flex';
+        // Remove last character if not a letter
         contactName.value = contactName.value.slice(0, -1);
     }
+});
+
+// ====== Phone Input Validation ======
+// Get DOM elements
+const phErrBox = document.getElementById('phErrBox');
+const contactPhNo = document.getElementById('contactPhNo');
+const phErr = document.getElementById('phErr');
+const phInfo = document.getElementById('phInfo');
+
+// Event listener for input on the contactPhNo field
+contactPhNo.addEventListener('input', function() {
+    const contactPhNoValue = contactPhNo.value;
+
+    // Validate phone number format
+    if (contactPhNoValue.length != 0) {
+        if (!/^(\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/.test(contactPhNoValue)) {
+            phErrBox.style.display = 'flex';
+            phInfo.addEventListener('mouseover', () => phErr.innerHTML = 'Follow the Number Format');
+            phInfo.addEventListener('mouseout', () => phErr.innerHTML = '');
+            phErr.style.color = 'blue'; // Changes text color to blue
+            phInfo.style.color = 'blue';
+        } else {
+            phErrBox.style.display = 'none';
+            phErr.style.color = '';
+            phInfo.style.color = '';
+        }
+
+        if(/[a-zA-Z]/.test(contactPhNoValue)){
+            phInfo.addEventListener('mouseover', () => phErr.innerHTML = 'Letters Not allowed');
+            phInfo.addEventListener('mouseout', () => phErr.innerHTML = '');
+            phErr.style.color = 'red'; // Changes text color to blue
+            phInfo.style.color = 'red';
+
+
+        }
+
+        
+    } else {
+        phErr.innerHTML = ''; // Clear error message if input is empty
+    }
+    
 });
 
 

@@ -173,6 +173,7 @@ input::placeholder{
     display: flex;
     justify-content: end;
     width: 170px;
+    display: none;
 }
 #nmErr, #phErr{
     background-color: white;
