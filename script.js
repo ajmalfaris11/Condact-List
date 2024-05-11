@@ -8,22 +8,24 @@ const nmErr = document.getElementById('nmErr');
 contactName.addEventListener('input', function(){
     const nmValue = contactName.value;
 
-    // Validation for length
-    if (nmValue.length > 15 && nmValue.length != 0 ) {
+    if(nmValue.length != 0 ){
+
+        // Validation for length
+    if (nmValue.length > 20) {
         // Show error message when mouse is over nmInfo
-        nmInfo.addEventListener('mouseover', () => nmErr.innerHTML = 'No more than 15 characters');
+        nmInfo.addEventListener('mouseover', () => nmErr.innerHTML = 'No more than 20 characters');
         // Clear error message when mouse leaves nmInfo
         nmInfo.addEventListener('mouseout', () => nmErr.innerHTML = '');
         nmErrBox.style.display = 'flex';
         // Trim input to 15 characters
-        contactName.value = nmValue.slice(0, 15);
+        contactName.value = nmValue.slice(0, 20);
     } else {
         nmErrBox.style.display = 'none';
         nmErr.innerHTML = ''; // Clear error message if input is valid
     }
 
     // Validation for letters only
-    if (!/^[a-zA-Z\s]+$/.test(nmValue) && nmValue.length != 0){
+    if (!/^[a-zA-Z\s]+$/.test(nmValue)){
         // Show error message when mouse is over nmInfo
         nmInfo.addEventListener('mouseover', () => nmErr.innerHTML = 'Letters Only Allowed');
         // Clear error message when mouse leaves nmInfo
@@ -33,6 +35,13 @@ contactName.addEventListener('input', function(){
         // Remove last character if not a letter
         contactName.value = contactName.value.slice(0, -1);
     }
+        
+    }
+    else{
+        nmErrBox.style.display = 'none';
+
+    }
+    
 });
 
 // ====== Phone Input Validation ======
@@ -72,6 +81,8 @@ contactPhNo.addEventListener('input', function() {
         
     } else {
         phErr.innerHTML = ''; // Clear error message if input is empty
+        phErrBox.style.display = 'none';
+
     }
     
 });
