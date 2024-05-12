@@ -126,7 +126,8 @@ function handleSubmission(event) {
     event.preventDefault();
     // Get form inputs
     const contactImg = document.getElementById('file-upload').files[0];
-    const contactName = contactForm['contactName'].value;
+    // const contactName = contactForm['contactName'].value;
+    const contactName = contactForm['contactName'].value.length == 0 ? contactForm['contactPhNo'].value : contactForm['contactName'].value;
     const contactPhNo = contactForm['contactPhNo'].value;
 
     // Create contact element
