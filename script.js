@@ -112,7 +112,23 @@ const submitBtn = document.getElementById('submitBtn');
 
 // only submit the form after checking the error box is empty
 submitBtn.addEventListener('click', function(event){
-       if(phErrBox.style.display === 'none'){
+    const contactPhNoValue = contactPhNo.value;
+    if(contactPhNo.value == 0){
+        phErrBox.style.display = 'flex';
+        phInfo.addEventListener('mouseover', () => phErr.innerHTML = 'Ener Phone Number');
+        phInfo.addEventListener('mouseout', ()=> phErr.innerHTML = "");
+    }
+     else if(!/^(\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/.test(contactPhNoValue) && /[a-zA-Z]/.test(contactPhNoValue)) {
+         phErrBox.style.display = 'flex';
+         console.log(phErrBox.style.display)
+     }
+    else{
+        phErrBox.style.display = 'none';
+        console.log(phErrBox.style.display)
+
+    }
+   
+    if(phErrBox.style.display === 'none' && !contactPhNoValue.length == 0 ){
         contactForm.addEventListener('submit', handleSubmission);
     }
     else{
