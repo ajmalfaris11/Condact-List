@@ -81,7 +81,7 @@ contactPhNo.addEventListener('input', function() {
         
     } else {
         phErr.innerHTML = ''; // Clear error message if input is empty
-        phErrBox.style.display = 'none';
+        // phErrBox.style.display = 'none';
 
     }
     
@@ -108,7 +108,19 @@ fileUploadInput.addEventListener('change', function(event) {
 
 
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', handleSubmission);
+const submitBtn = document.getElementById('submitBtn');
+
+// only submit the form after checking the error box is empty
+submitBtn.addEventListener('click', function(event){
+       if(phErrBox.style.display === 'none'){
+        contactForm.addEventListener('submit', handleSubmission);
+    }
+    else{
+        event.preventDefault();
+    }
+
+})
+
 
 function handleSubmission(event) {
     event.preventDefault();

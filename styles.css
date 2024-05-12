@@ -169,7 +169,7 @@ input::placeholder{
 
 /*------------  error box -------- */
 
-.errBox{
+#phErrBox, #nmErrBox{
     display: flex;
     justify-content: end;
     width: 170px;
