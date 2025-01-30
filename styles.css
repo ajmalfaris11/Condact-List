@@ -33,7 +33,6 @@ body {
 
 #home {
     width: min(100%, 600px);
-    padding-right: 30px;
 }
 
 header section {
@@ -74,6 +73,8 @@ header .links {
     justify-content: flex-end;
     gap: 10px;
     margin-top: 20px;
+    padding-right: 30px;
+
 }
 
 header span {
