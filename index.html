@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact List</title>
     <link rel="icon" href="imgs/contact3Dicon.png">
     <!-- google icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- --- Font awesome --- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- ===== Header ===== -->
     <header id="home">
@@ -19,18 +22,15 @@
                 <div>
                     <img src="imgs/contact3Dicon.png" alt="Logco" id="logoImg">
                 </div>
-                <h1>Contacts</h1>                
-                <div class="links">
-                    <a href="https://github.com/ajmalfaris11" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/ajmal-faris-31b0a22b5/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://ajmal-faris.vercel.app/" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                </div>
+                <h1>Contacts</h1>
             </div>
+        </section>
+        <section>
             <div class="icon">
                 <a href="#addContact">
                     <span class="material-symbols-outlined" id="addBtn">add</span>
                 </a>
-                
+
                 <span class="material-symbols-outlined">
                     search
                 </span>
@@ -80,13 +80,14 @@
 
     <section class="wrapper" id="addContact">
         <a href="#home"><span class="material-symbols-outlined goBack" id="backBtn">
-            arrow_back_ios_new
+                arrow_back_ios_new
             </span>
         </a>
         <form action="" id="contactForm">
             <div id="uploadImgDiv">
-                <label for="file-upload" class="custom-file-upload" id="contactImg"><img src="imgs/addImage.png" alt="" id="formImg"></label>
-                <input type="file" id="file-upload" name="file-upload" accept="image/*" style="display: none;">                            
+                <label for="file-upload" class="custom-file-upload" id="contactImg"><img src="imgs/addImage.png" alt=""
+                        id="formImg"></label>
+                <input type="file" id="file-upload" name="file-upload" accept="image/*" style="display: none;">
             </div>
             <div class="inputBox">
                 <input type="text" placeholder="Name" id="contactName">
@@ -96,7 +97,7 @@
                         error </span>
                 </div>
             </div>
-            
+
             <div class="inputBox">
                 <input type="text" placeholder="Phone" id="contactPhNo">
                 <div class="errBox" id="phErrBox">
@@ -110,7 +111,7 @@
                 <a href="#main" id="CancelBtn">Cancel</a>
                 <input type="submit" value="Save" id="submitBtn">
             </div>
-        </form> 
+        </form>
 
         <div id="contactFormImg">
             <img src="imgs/condact FormImg.png" alt="">
@@ -120,11 +121,13 @@
     <footer id="footer">
         <section class="footer-links">
             <a href="https://github.com/ajmalfaris11" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/ajmal-faris-31b0a22b5/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/ajmal-faris-31b0a22b5/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://ajmal-faris.vercel.app/" target="_blank"><i class="fa-solid fa-globe"></i></a>
         </section>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

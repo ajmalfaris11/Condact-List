@@ -22,15 +22,19 @@ body {
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-
-  width: min(100%, 600px);
-  padding-inline: 5%;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 5%;
+    margin: 0 auto;
 }
 
 /* ===== Header section ===== Header section ===== */
+
+#home {
+    width: min(100%, 600px);
+    padding-right: 30px;
+}
 
 header section {
     margin-top: 30px;
@@ -64,11 +68,12 @@ header .links {
     font-size: xx-small;
 }
 
-header div.icon {
-    margin-top: 30px;
+.icon {
+    width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 10px;
+    margin-top: 20px;
 }
 
 header span {
@@ -94,7 +99,8 @@ main {
     height: 70vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    width: 100%;
+    width: min(100%, 600px);
+
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -114,7 +120,7 @@ main ul li {
     padding: 10px;
     border-radius: 12px;
     transition: 1s ease-in-out;
-     width: 100%;
+    width: 100%;
 }
 
 li:hover {
@@ -299,15 +305,15 @@ footer section i:hover {
 
 /* for Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* for Firefox */
 * {
-  scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 /* for IE (yes, it still haunts us) */
 * {
-  -ms-overflow-style: none;
+    -ms-overflow-style: none;
 }
