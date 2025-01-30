@@ -152,6 +152,9 @@ div.contact p {
 
 /* ====== Form Style ====== Form Style ====== */
 
+.add-page {
+    width: min(100%, 600px);
+}
 
 #addContact {
     height: 80vh;
