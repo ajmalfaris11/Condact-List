@@ -296,3 +296,18 @@ footer section i:hover {
     transform: scale(1.2);
     ;
 }
+
+/* for Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* for Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* for IE (yes, it still haunts us) */
+* {
+  -ms-overflow-style: none;
+}
