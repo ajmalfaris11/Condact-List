@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,53 +7,71 @@
     list-style: none;
 }
 
-body{
-    background:linear-gradient(to right, #845fff, #7047f7);
+body {
+    background: linear-gradient(to right, #3b0dd3, #8059ff);
     scroll-behavior: smooth;
-}
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
 
-.wrapper{
-    padding-inline: 5%;
-}
-
-/* ===== Header section ===== Header section ===== */
-
-header section{
-    margin-top: 30px;
-}
-#heading{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#logoImg{
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: min(100%, 600px);
+  padding-inline: 5%;
+  margin: 0 auto;
+}
+
+/* ===== Header section ===== Header section ===== */
+
+header section {
+    margin-top: 30px;
+}
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoImg {
     width: 50px;
 }
 
-header h1{
-    font-size:32px;
+header h1 {
+    font-size: 32px;
     color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-header .links{
+
+header .links {
     display: flex;
     gap: 10px;
 }
-#heading a i{
+
+#heading a i {
     color: white;
     font-size: xx-small;
 }
-header div.icon{
+
+header div.icon {
     margin-top: 30px;
     display: flex;
     justify-content: end;
     gap: 10px;
 }
 
-header span{
+header span {
     color: white;
     text-align: end;
     align-items: end;
@@ -63,7 +81,8 @@ header span{
     padding: 3px;
     transition: 0.5s ease-in-out;
 }
-header span:hover{
+
+header span:hover {
     color: #7351DE;
     background-color: white;
 }
@@ -71,74 +90,83 @@ header span:hover{
 /* ====== Main section Style ====== Main section Style ====== */
 
 
-main{
+main {
     height: 70vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 }
-main ul{
+
+main ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-block: 20px;
+    width: 100%;
+
 }
 
-main ul li{
+main ul li {
     background-color: #fff;
     padding: 10px;
     border-radius: 12px;
-    transition:1s ease-in-out;
+    transition: 1s ease-in-out;
+     width: 100%;
 }
 
-li:hover{
+li:hover {
     transform: scale(1.05);
 }
 
-main ul li div.contact{
+main ul li div.contact {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-div.contact img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  top: 0;
+div.contact img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    top: 0;
 }
 
-div.contact h2{
+div.contact h2 {
     font-size: 18px;
     text-transform: capitalize;
 }
 
-div.contact p{
+div.contact p {
     font-size: smaller;
 }
 
 /* ====== Form Style ====== Form Style ====== */
 
 
-#addContact{
+#addContact {
     height: 80vh;
     display: none;
 }
 
-.goBack{
+.goBack {
     color: white;
     margin-top: 30px;
 }
-.custom-file-upload{
+
+.custom-file-upload {
     width: 70px;
-    height:70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.custom-file-upload img{
+.custom-file-upload img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -146,44 +174,48 @@ div.contact p{
 
 }
 
-#uploadImgDiv{
+#uploadImgDiv {
     margin-bottom: 30px;
 }
-.inputBox{
+
+.inputBox {
     display: flex;
     padding: 16px;
-    border-radius:8px;
+    border-radius: 8px;
     background-color: white;
     width: 100%;
 }
 
-.inputBox span{
-    font-size:small;
+.inputBox span {
+    font-size: small;
     color: red;
 }
 
-input::placeholder{
+input::placeholder {
     color: #7351DE;
 }
 
 
 /*------------  error box -------- */
 
-#phErrBox, #nmErrBox{
+#phErrBox,
+#nmErrBox {
     display: flex;
     justify-content: end;
     width: 170px;
     display: none;
 }
-#nmErr, #phErr{
+
+#nmErr,
+#phErr {
     background-color: white;
-    width:100%;
+    width: 100%;
     text-align: start;
     font-size: xx-small;
 
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -193,21 +225,21 @@ form{
     width: 100%;
 }
 
-form input{
+form input {
     outline: none;
     border: none;
     width: 100%;
 
 }
 
-#buttons{
+#buttons {
     display: flex;
     gap: 10px;
     width: 100%;
     margin-top: 20px;
 }
 
-#CancelBtn{
+#CancelBtn {
     border-radius: 8px;
     background-color: white;
     width: 100%;
@@ -217,33 +249,35 @@ form input{
 
 }
 
-input[type='submit']{
+input[type='submit'] {
     border-radius: 8px;
     background-color: white;
     width: 100%;
     padding: 10px;
 }
 
-#contactFormImg{
+#contactFormImg {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60%;
-    margin-top:10px;
+    margin-top: 10px;
 }
-#contactFormImg img{
+
+#contactFormImg img {
     height: 80%;
 }
 
 /* ===== Footer ====== Footer ====== Footer ====== */
 
-#footer{
+#footer {
     position: relative;
     justify-content: center;
     height: 20vh;
     display: none;
 }
-footer section{
+
+footer section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -253,11 +287,12 @@ footer section{
 
 }
 
-footer section i{
+footer section i {
     color: white;
     transition: 0.5s ease-in-out;
 }
 
-footer section i:hover{
-    transform: scale(1.2);;
+footer section i:hover {
+    transform: scale(1.2);
+    ;
 }
